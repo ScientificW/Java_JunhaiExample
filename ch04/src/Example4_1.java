@@ -1,6 +1,6 @@
 /*
-reader.nextLine½«¼üÅÌÊäÈëµÄÒ»ĞĞÄÚÈİ×ª»»³É×Ö·û´®
-toCharArray½«×Ö·û´®×ª»»Îª×Ö·ûÊı×é
+reader.nextLineå°†é”®ç›˜è¾“å…¥çš„ä¸€è¡Œå†…å®¹è½¬æ¢æˆå­—ç¬¦ä¸²
+toCharArrayå°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºå­—ç¬¦æ•°ç»„
 */
 import java.util.Scanner;
 public class Example4_1{
@@ -12,11 +12,11 @@ public class Example4_1{
            a[i]=(char)(a[i]^'w');	 
         }
         String secret=new String(a); 
-        System.out.println("ÃÜÎÄ:"+secret);
+        System.out.println("å¯†æ–‡:"+secret);
         for(int i=0;i<a.length;i++){
            a[i]=(char)(a[i]^'w');
         }
         String code=new String(a);  
-        System.out.println("Ô­ÎÄ:"+code);
+        System.out.println("åŸæ–‡:"+code);
     }
 }

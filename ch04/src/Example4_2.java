@@ -1,7 +1,7 @@
-/*main·½·¨ÖĞµÄargs²ÎÊı³ÆÎªÃüÁîĞĞ²ÎÊı
-Ö¸ÔËĞĞÊ±¸úÔÚÎÄ¼şÃûºóÊäÈëµÄ¶à¸ö×Ö·û´®£¬
-±£´æÔÚargs[]Êı×éÖĞ£¬ÒÔ¿Õ¸ñ×÷Îª·Ö¸ô·û¡£
-parseDoubleÊÇ½«²ÎÊı×ª»»ÎªË«¾«¶È¸¡µãÊı
+/*mainæ–¹æ³•ä¸­çš„argså‚æ•°ç§°ä¸ºå‘½ä»¤è¡Œå‚æ•°
+æŒ‡è¿è¡Œæ—¶è·Ÿåœ¨æ–‡ä»¶ååè¾“å…¥çš„å¤šä¸ªå­—ç¬¦ä¸²ï¼Œ
+ä¿å­˜åœ¨args[]æ•°ç»„ä¸­ï¼Œä»¥ç©ºæ ¼ä½œä¸ºåˆ†éš”ç¬¦ã€‚
+parseDoubleæ˜¯å°†å‚æ•°è½¬æ¢ä¸ºåŒç²¾åº¦æµ®ç‚¹æ•°
 */
 public class Example4_2{
     public static void main(String args[ ]){
@@ -10,6 +10,6 @@ public class Example4_2{
            sum=sum+Double.parseDouble(args[i]);
         }
         n=sum/args.length;
-        System.out.println("Æ½¾ùÊı:"+n);
+        System.out.println("å¹³å‡æ•°:"+n);
     }
 }

@@ -2,12 +2,12 @@
 // 
 // J_Grid15.java
 // 
-// ¿ª·¢Õß: Óº¿¡º£
+// å¼€å‘è€…: é›ä¿Šæµ·
 // ////////////////////////////////////////////////////////
-// ¼ò½é:
-//     Êý×éÓ¦ÓÃÀý³Ì--Çó½âºÍÎª15µÄÆåÅÌÓÎÏ·ÎÊÌâ¡£
-// ½«´Ó1µ½9µÄ¾Å¸öÊý²»ÖØ¸´µØÌîÈë3¨w3µÄÆåÅÌÖÐ£¬Ê¹µÃ¸÷ÐÐ¡¢¸÷ÁÐ
-// ÒÔ¼°Á½¸ö¶Ô½ÇÏßÉÏµÄÈý¸öÊýÖ®ºÍ¾ùÎª15¡£
+// ç®€ä»‹:
+//     æ•°ç»„åº”ç”¨ä¾‹ç¨‹--æ±‚è§£å’Œä¸º15çš„æ£‹ç›˜æ¸¸æˆé—®é¢˜ã€‚
+// å°†ä»Ž1åˆ°9çš„ä¹ä¸ªæ•°ä¸é‡å¤åœ°å¡«å…¥3â•³3çš„æ£‹ç›˜ä¸­ï¼Œä½¿å¾—å„è¡Œã€å„åˆ—
+// ä»¥åŠä¸¤ä¸ªå¯¹è§’çº¿ä¸Šçš„ä¸‰ä¸ªæ•°ä¹‹å’Œå‡ä¸º15ã€‚
 // ////////////////////////////////////////////////////////
 // Copyright:
 //
@@ -33,23 +33,23 @@
 //      [4] Jun-Hai Yong. Programming in Java. 
 //          Beijing: Tsinghua University Press, 2004.
 //
-// °æÈ¨:
-// Ê¹ÓÃ±¾Àý×Ó£¬Çë×¢Ã÷ÒýÓÃ:
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-// ÇëºÏ·¨Ê¹ÓÃÀý³Ì£¬ÆäÓÃÍ¾Ó¦µ±ºÏ·¨ÓÐÒæ¶øÇÒ²»Ó¦¶ÔÈÎºÎÈËÔì³ÉÈÎºÎ
-// ÉËº¦»òËðÊ§¡£Í¬Ê±Çë×¢Òâ½Ì²Ä×÷Õß¼°³ö°æÉçÃ»ÓÐ¶ÔÀý³Ì×ö³öÈÎºÎ³Ð
-// ÅµÓë±£Ö¤¡£
-// ¾ßÌåÒýÓÃµÄ·½·¨¼°Àý×ÓÈçÏÂ:
-// ±¾³ÌÐòÊÇÏÂÃæ½Ì²ÄµÄÒ»¸öÀý³Ì(»ò±¾³ÌÐò»ùÓÚÏÂÃæ½Ì²ÄµÄÀý³ÌÐÞ¸Ä)
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
+// ç‰ˆæƒ:
+// ä½¿ç”¨æœ¬ä¾‹å­ï¼Œè¯·æ³¨æ˜Žå¼•ç”¨:
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+// è¯·åˆæ³•ä½¿ç”¨ä¾‹ç¨‹ï¼Œå…¶ç”¨é€”åº”å½“åˆæ³•æœ‰ç›Šè€Œä¸”ä¸åº”å¯¹ä»»ä½•äººé€ æˆä»»ä½•
+// ä¼¤å®³æˆ–æŸå¤±ã€‚åŒæ—¶è¯·æ³¨æ„æ•™æä½œè€…åŠå‡ºç‰ˆç¤¾æ²¡æœ‰å¯¹ä¾‹ç¨‹åšå‡ºä»»ä½•æ‰¿
+// è¯ºä¸Žä¿è¯ã€‚
+// å…·ä½“å¼•ç”¨çš„æ–¹æ³•åŠä¾‹å­å¦‚ä¸‹:
+// æœ¬ç¨‹åºæ˜¯ä¸‹é¢æ•™æçš„ä¸€ä¸ªä¾‹ç¨‹(æˆ–æœ¬ç¨‹åºåŸºäºŽä¸‹é¢æ•™æçš„ä¾‹ç¨‹ä¿®æ”¹)
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
 //
-// Óº¿¡º£±àÐ´µÄÒ»Ð©½Ì²ÄºÍ½Ì²ÎÈçÏÂ:
-//      [1] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-//      [2] Óº¿¡º£. Java³ÌÐòÉè¼Æ½Ì³Ì£¨µÚ2°æ£©. 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2007.
-//      [3] Óº¿¡º£. Java³ÌÐòÉè¼ÆÏ°Ìâ¼¯(º¬²Î¿¼´ð°¸). 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2006.
-//      [4] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2004.
+// é›ä¿Šæµ·ç¼–å†™çš„ä¸€äº›æ•™æå’Œæ•™å‚å¦‚ä¸‹:
+//      [1] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+//      [2] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡æ•™ç¨‹ï¼ˆç¬¬2ç‰ˆï¼‰. 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2007.
+//      [3] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡ä¹ é¢˜é›†(å«å‚è€ƒç­”æ¡ˆ). 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2006.
+//      [4] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2004.
 //
 // ////////////////////////////////////////////////////////
 
@@ -60,9 +60,9 @@ public class J_Grid15
     J_Grid15( )
     {
         m_board= new int[3][3];
-    } // J_Grid15¹¹Ôì·½·¨½áÊø
+    } // J_Grid15æž„é€ æ–¹æ³•ç»“æŸ
 
-    // Êä³öÆåÅÌµÄ¸ñÏßÐÐ
+    // è¾“å‡ºæ£‹ç›˜çš„æ ¼çº¿è¡Œ
     private void mb_outputGridRowBoard( )
     {
         int i;
@@ -70,18 +70,18 @@ public class J_Grid15
         for (i=0; i<5; i++)
             System.out.print("-");
         System.out.println("+");
-    } // ·½·¨mb_outputGridRowBoard½áÊø
+    } // æ–¹æ³•mb_outputGridRowBoardç»“æŸ
 
-    // Êä³öÆåÅÌµÄÊý¾ÝÐÐ(µÚiÐÐ, iÖ»ÄÜÎª0, 1 »ò 2)
+    // è¾“å‡ºæ£‹ç›˜çš„æ•°æ®è¡Œ(ç¬¬iè¡Œ, iåªèƒ½ä¸º0, 1 æˆ– 2)
     private void mb_outputGridRowBoard(int i)
     {
         int j;
         for (j=0; j < m_board[i].length; j++)
             System.out.print("|" + m_board[i][j]);
         System.out.println("|");
-    } // ·½·¨mb_outputGridRowBoard½áÊø
+    } // æ–¹æ³•mb_outputGridRowBoardç»“æŸ
 
-    // Êä³öÆåÅÌ
+    // è¾“å‡ºæ£‹ç›˜
     public void mb_outputGrid( )
     {
         int i;
@@ -90,20 +90,20 @@ public class J_Grid15
         {
             mb_outputGridRowBoard(i);
             mb_outputGridRowBoard( );
-        } // forÑ­»·½áÊø
-    } // ·½·¨mb_outputGrid½áÊø
+        } // forå¾ªçŽ¯ç»“æŸ
+    } // æ–¹æ³•mb_outputGridç»“æŸ
 
-    // ³õÊ¼»¯Êý¾Ý
+    // åˆå§‹åŒ–æ•°æ®
     private void mb_dataInit( )
     {
         int i, j, k;
         for (i=0, k=1; i < m_board.length; i++)
         for (j=0; j < m_board[i].length; j++, k++)
             m_board[i][j]= k;
-    } // ·½·¨mb_dataInit½áÊø
+    } // æ–¹æ³•mb_dataInitç»“æŸ
     
-    // Êý¾Ý½áÊø¼ì²â
-    // ·µ»ØÖµËµÃ÷: µ±Êý¾ÝÎª×îºóÒ»¸öÊý¾ÝÊ±£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+    // æ•°æ®ç»“æŸæ£€æµ‹
+    // è¿”å›žå€¼è¯´æ˜Ž: å½“æ•°æ®ä¸ºæœ€åŽä¸€ä¸ªæ•°æ®æ—¶ï¼Œè¿”å›žtrueï¼›å¦åˆ™ï¼Œè¿”å›žfalse
     private boolean mb_dataEnd( )
     {
         int i, j, k;
@@ -112,9 +112,9 @@ public class J_Grid15
                 if (m_board[i][j]!= k)
                     return(false);
         return(true);
-    } // ·½·¨mb_dataEnd½áÊø
+    } // æ–¹æ³•mb_dataEndç»“æŸ
 
-    // È¡ÏÂÒ»¸öÊý¾Ý
+    // å–ä¸‹ä¸€ä¸ªæ•°æ®
     private void mb_dataNext( )
     {
         int i, j;
@@ -126,11 +126,11 @@ public class J_Grid15
                 {
                     m_board[i][j]++;
                     return;
-                } // if-else½á¹¹½áÊø
-    } // ·½·¨mb_dataNext½áÊø
+                } // if-elseç»“æž„ç»“æŸ
+    } // æ–¹æ³•mb_dataNextç»“æŸ
 
-    // Êý¾Ý¼ì²â: ÅÐ¶ÏÊý¾ÝÖÐÊÇ·ñº¬ÓÐÏàÍ¬µÄÊý×Ö
-    // µ±Êý¾ÝÖÐ´æÔÚÏàÍ¬Êý×ÖÊ±£¬·µ»Øfalse; ·ñÔò£¬·µ»Ø true
+    // æ•°æ®æ£€æµ‹: åˆ¤æ–­æ•°æ®ä¸­æ˜¯å¦å«æœ‰ç›¸åŒçš„æ•°å­—
+    // å½“æ•°æ®ä¸­å­˜åœ¨ç›¸åŒæ•°å­—æ—¶ï¼Œè¿”å›žfalse; å¦åˆ™ï¼Œè¿”å›ž true
     private boolean mb_dataCheckDifferent( )
     {
         int i, j;
@@ -143,10 +143,10 @@ public class J_Grid15
         if (j==9)
             return(true);
         return(false);
-    } // ·½·¨mb_dataCheckDifferent½áÊø
+    } // æ–¹æ³•mb_dataCheckDifferentç»“æŸ
 
-    // Êý¾Ý¼ì²â: ¸÷ÐÐºÍÊÇ·ñÎª15
-    // µ±¸÷ÐÐºÍ¾ùÎª15Ê±£¬·µ»Øtrue; ·ñÔò£¬·µ»Øfalse
+    // æ•°æ®æ£€æµ‹: å„è¡Œå’Œæ˜¯å¦ä¸º15
+    // å½“å„è¡Œå’Œå‡ä¸º15æ—¶ï¼Œè¿”å›žtrue; å¦åˆ™ï¼Œè¿”å›žfalse
     private boolean mb_dataCheckSumRow( )
     {
         int i, j, k;
@@ -156,12 +156,12 @@ public class J_Grid15
                 k+= m_board[i][j];
             if (k!=15)
                 return(false);
-        } // forÑ­»·½áÊø
+        } // forå¾ªçŽ¯ç»“æŸ
         return(true);
-    } // ·½·¨mb_dataCheckSumRow½áÊø
+    } // æ–¹æ³•mb_dataCheckSumRowç»“æŸ
 
-    // Êý¾Ý¼ì²â: ¸÷ÁÐºÍÊÇ·ñÎª15
-    // µ±¸÷ÁÐºÍ¾ùÎª15Ê±£¬·µ»Øtrue; ·ñÔò£¬·µ»Øfalse
+    // æ•°æ®æ£€æµ‹: å„åˆ—å’Œæ˜¯å¦ä¸º15
+    // å½“å„åˆ—å’Œå‡ä¸º15æ—¶ï¼Œè¿”å›žtrue; å¦åˆ™ï¼Œè¿”å›žfalse
     private boolean mb_dataCheckSumColumn( )
     {
         int i, j, k;
@@ -171,9 +171,9 @@ public class J_Grid15
                 k+= m_board[j][i];
             if (k!=15)
                 return(false);
-        } // forÑ­»·½áÊø
+        } // forå¾ªçŽ¯ç»“æŸ
         return(true);
-    } // ·½·¨mb_dataCheckSumColumn½áÊø
+    } // æ–¹æ³•mb_dataCheckSumColumnç»“æŸ
 
     private boolean mb_dataCheck( )
     {
@@ -183,16 +183,16 @@ public class J_Grid15
             return(false);
         if (!mb_dataCheckSumColumn( ))
             return(false);
-        // ¼ì²â¶Ô½ÇÏßÖ®ºÍÊÇ·ñÎª 15
+        // æ£€æµ‹å¯¹è§’çº¿ä¹‹å’Œæ˜¯å¦ä¸º 15
         if (m_board[0][0]+m_board[1][1]+m_board[2][2]!=15)
             return(false);
-        // ¼ì²â¶Ô½ÇÏßÖ®ºÍÊÇ·ñÎª 15
+        // æ£€æµ‹å¯¹è§’çº¿ä¹‹å’Œæ˜¯å¦ä¸º 15
         if (m_board[0][2]+m_board[1][1]+m_board[2][0]!=15)
             return(false);
         return(true);
-    } // ·½·¨mb_dataCheck½áÊø
+    } // æ–¹æ³•mb_dataCheckç»“æŸ
 
-    // Çó½â²¢Êä³öÆåÅÌÎÊÌâ
+    // æ±‚è§£å¹¶è¾“å‡ºæ£‹ç›˜é—®é¢˜
     public void mb_arrange( )
     {
         int n= 1;
@@ -200,17 +200,17 @@ public class J_Grid15
         {
             if (mb_dataCheck( ))
             {
-                System.out.println("µÚ" + n + "¸ö½á¹û:");
+                System.out.println("ç¬¬" + n + "ä¸ªç»“æžœ:");
                 n++;
                 mb_outputGrid( );
-            } // if½á¹¹½áÊø
-        } // forÑ­»·½áÊø
-    } // ·½·¨mb_arrange½áÊø
+            } // ifç»“æž„ç»“æŸ
+        } // forå¾ªçŽ¯ç»“æŸ
+    } // æ–¹æ³•mb_arrangeç»“æŸ
 
     public static void main(String args[ ])
     {
         J_Grid15 a= new J_Grid15( );
         a.mb_arrange( );
-    } // ·½·¨main½áÊø
-} // ÀàJ_Grid15½áÊø
+    } // æ–¹æ³•mainç»“æŸ
+} // ç±»J_Grid15ç»“æŸ
 
