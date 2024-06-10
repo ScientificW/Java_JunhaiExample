@@ -1,6 +1,6 @@
 public class Simulator {
    public void playSound(Animal animal) {
-       System.out.print("现在播放"+animal.getAnimalName()+"类的声音:");
+       System.out.print("鐜板湪鎾斁"+animal.getAnimalName()+"绫荤殑澹伴煶:");
        animal.cry();
    }
 }

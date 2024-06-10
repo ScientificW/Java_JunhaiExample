@@ -1,8 +1,8 @@
 public class Dog extends Animal {
    public void cry() {
-      System.out.println("ÍôÍô...ÍôÍô"); 
+      System.out.println("æ±ªæ±ª...æ±ªæ±ª"); 
    }  
    public String getAnimalName() {
-      return "¹·";
+      return "ç‹—";
    }
 }

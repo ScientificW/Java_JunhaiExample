@@ -2,10 +2,10 @@
 // 
 // J_Scope.java
 // 
-// ¿ª·¢Õß: Óº¿¡º£
+// å¼€å‘è€…: é›ä¿Šæµ·
 // ////////////////////////////////////////////////////////
-// ¼ò½é:
-//     Í¬Ãû±äÁ¿×÷ÓÃÓò·¶Î§ÖØµþÇé¿ö´¦ÀíÀý³Ì¡£
+// ç®€ä»‹:
+//     åŒåå˜é‡ä½œç”¨åŸŸèŒƒå›´é‡å æƒ…å†µå¤„ç†ä¾‹ç¨‹ã€‚
 // ////////////////////////////////////////////////////////
 // Copyright:
 //
@@ -31,31 +31,31 @@
 //      [4] Jun-Hai Yong. Programming in Java. 
 //          Beijing: Tsinghua University Press, 2004.
 //
-// °æÈ¨:
-// Ê¹ÓÃ±¾Àý×Ó£¬Çë×¢Ã÷ÒýÓÃ:
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-// ÇëºÏ·¨Ê¹ÓÃÀý³Ì£¬ÆäÓÃÍ¾Ó¦µ±ºÏ·¨ÓÐÒæ¶øÇÒ²»Ó¦¶ÔÈÎºÎÈËÔì³ÉÈÎºÎ
-// ÉËº¦»òËðÊ§¡£Í¬Ê±Çë×¢Òâ½Ì²Ä×÷Õß¼°³ö°æÉçÃ»ÓÐ¶ÔÀý³Ì×ö³öÈÎºÎ³Ð
-// ÅµÓë±£Ö¤¡£
-// ¾ßÌåÒýÓÃµÄ·½·¨¼°Àý×ÓÈçÏÂ:
-// ±¾³ÌÐòÊÇÏÂÃæ½Ì²ÄµÄÒ»¸öÀý³Ì(»ò±¾³ÌÐò»ùÓÚÏÂÃæ½Ì²ÄµÄÀý³ÌÐÞ¸Ä)
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
+// ç‰ˆæƒ:
+// ä½¿ç”¨æœ¬ä¾‹å­ï¼Œè¯·æ³¨æ˜Žå¼•ç”¨:
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+// è¯·åˆæ³•ä½¿ç”¨ä¾‹ç¨‹ï¼Œå…¶ç”¨é€”åº”å½“åˆæ³•æœ‰ç›Šè€Œä¸”ä¸åº”å¯¹ä»»ä½•äººé€ æˆä»»ä½•
+// ä¼¤å®³æˆ–æŸå¤±ã€‚åŒæ—¶è¯·æ³¨æ„æ•™æä½œè€…åŠå‡ºç‰ˆç¤¾æ²¡æœ‰å¯¹ä¾‹ç¨‹åšå‡ºä»»ä½•æ‰¿
+// è¯ºä¸Žä¿è¯ã€‚
+// å…·ä½“å¼•ç”¨çš„æ–¹æ³•åŠä¾‹å­å¦‚ä¸‹:
+// æœ¬ç¨‹åºæ˜¯ä¸‹é¢æ•™æçš„ä¸€ä¸ªä¾‹ç¨‹(æˆ–æœ¬ç¨‹åºåŸºäºŽä¸‹é¢æ•™æçš„ä¾‹ç¨‹ä¿®æ”¹)
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
 //
-// Óº¿¡º£±àÐ´µÄÒ»Ð©½Ì²ÄºÍ½Ì²ÎÈçÏÂ:
-//      [1] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-//      [2] Óº¿¡º£. Java³ÌÐòÉè¼Æ½Ì³Ì£¨µÚ2°æ£©. 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2007.
-//      [3] Óº¿¡º£. Java³ÌÐòÉè¼ÆÏ°Ìâ¼¯(º¬²Î¿¼´ð°¸). 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2006.
-//      [4] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2004.
+// é›ä¿Šæµ·ç¼–å†™çš„ä¸€äº›æ•™æå’Œæ•™å‚å¦‚ä¸‹:
+//      [1] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+//      [2] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡æ•™ç¨‹ï¼ˆç¬¬2ç‰ˆï¼‰. 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2007.
+//      [3] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡ä¹ é¢˜é›†(å«å‚è€ƒç­”æ¡ˆ). 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2006.
+//      [4] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2004.
 //
 // ////////////////////////////////////////////////////////
 
 class J_Time1
 {
     public int data = 3;
-    // ÕâÀïÊ¡ÂÔÀàÌåµÄÆäËû²¿·Ö
-} // ÀàJ_Time½áÊø
+    // è¿™é‡Œçœç•¥ç±»ä½“çš„å…¶ä»–éƒ¨åˆ†
+} // ç±»J_Timeç»“æŸ
 public class J_Scope extends J_Time1
 {
     public int data = 2;
@@ -65,14 +65,14 @@ public class J_Scope extends J_Time1
         System.out.println("data=" + data);
         System.out.println("this.data=" + this.data);
         System.out.println("super.data=" + super.data);
-    } // ·½·¨mb_method½áÊø
+    } // æ–¹æ³•mb_methodç»“æŸ
     public static void main(String args[ ])
     {
         J_Scope a = new J_Scope( );
 //        J_Time t = new J_Time();
 //        J_Time t = a;
         a.mb_method();
-//        ((J_Scope)t).mb_method();		//ÏòÏÂ×ªÐÍ
-    } // ·½·¨main½áÊø
-} // ÀàJ_Scope½áÊø
+//        ((J_Scope)t).mb_method();		//å‘ä¸‹è½¬åž‹
+    } // æ–¹æ³•mainç»“æŸ
+} // ç±»J_Scopeç»“æŸ
 

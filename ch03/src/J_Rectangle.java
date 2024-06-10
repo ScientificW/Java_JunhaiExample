@@ -2,10 +2,10 @@
 // 
 // J_Rectangle.java
 // 
-// ¿ª·¢Õß: Óº¿¡º£
+// å¼€å‘è€…: é›ä¿Šæµ·
 // ////////////////////////////////////////////////////////
-// ¼ò½é:
-//     ¾ØÐÎÀý³Ì¡£
+// ç®€ä»‹:
+//     çŸ©å½¢ä¾‹ç¨‹ã€‚
 // ////////////////////////////////////////////////////////
 // Copyright:
 //
@@ -31,30 +31,30 @@
 //      [4] Jun-Hai Yong. Programming in Java. 
 //          Beijing: Tsinghua University Press, 2004.
 //
-// °æÈ¨:
-// Ê¹ÓÃ±¾Àý×Ó£¬Çë×¢Ã÷ÒýÓÃ:
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-// ÇëºÏ·¨Ê¹ÓÃÀý³Ì£¬ÆäÓÃÍ¾Ó¦µ±ºÏ·¨ÓÐÒæ¶øÇÒ²»Ó¦¶ÔÈÎºÎÈËÔì³ÉÈÎºÎ
-// ÉËº¦»òËðÊ§¡£Í¬Ê±Çë×¢Òâ½Ì²Ä×÷Õß¼°³ö°æÉçÃ»ÓÐ¶ÔÀý³Ì×ö³öÈÎºÎ³Ð
-// ÅµÓë±£Ö¤¡£
-// ¾ßÌåÒýÓÃµÄ·½·¨¼°Àý×ÓÈçÏÂ:
-// ±¾³ÌÐòÊÇÏÂÃæ½Ì²ÄµÄÒ»¸öÀý³Ì(»ò±¾³ÌÐò»ùÓÚÏÂÃæ½Ì²ÄµÄÀý³ÌÐÞ¸Ä)
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
+// ç‰ˆæƒ:
+// ä½¿ç”¨æœ¬ä¾‹å­ï¼Œè¯·æ³¨æ˜Žå¼•ç”¨:
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+// è¯·åˆæ³•ä½¿ç”¨ä¾‹ç¨‹ï¼Œå…¶ç”¨é€”åº”å½“åˆæ³•æœ‰ç›Šè€Œä¸”ä¸åº”å¯¹ä»»ä½•äººé€ æˆä»»ä½•
+// ä¼¤å®³æˆ–æŸå¤±ã€‚åŒæ—¶è¯·æ³¨æ„æ•™æä½œè€…åŠå‡ºç‰ˆç¤¾æ²¡æœ‰å¯¹ä¾‹ç¨‹åšå‡ºä»»ä½•æ‰¿
+// è¯ºä¸Žä¿è¯ã€‚
+// å…·ä½“å¼•ç”¨çš„æ–¹æ³•åŠä¾‹å­å¦‚ä¸‹:
+// æœ¬ç¨‹åºæ˜¯ä¸‹é¢æ•™æçš„ä¸€ä¸ªä¾‹ç¨‹(æˆ–æœ¬ç¨‹åºåŸºäºŽä¸‹é¢æ•™æçš„ä¾‹ç¨‹ä¿®æ”¹)
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
 //
-// Óº¿¡º£±àÐ´µÄÒ»Ð©½Ì²ÄºÍ½Ì²ÎÈçÏÂ:
-//      [1] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-//      [2] Óº¿¡º£. Java³ÌÐòÉè¼Æ½Ì³Ì£¨µÚ2°æ£©. 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2007.
-//      [3] Óº¿¡º£. Java³ÌÐòÉè¼ÆÏ°Ìâ¼¯(º¬²Î¿¼´ð°¸). 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2006.
-//      [4] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2004.
+// é›ä¿Šæµ·ç¼–å†™çš„ä¸€äº›æ•™æå’Œæ•™å‚å¦‚ä¸‹:
+//      [1] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+//      [2] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡æ•™ç¨‹ï¼ˆç¬¬2ç‰ˆï¼‰. 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2007.
+//      [3] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡ä¹ é¢˜é›†(å«å‚è€ƒç­”æ¡ˆ). 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2006.
+//      [4] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2004.
 //
 // ////////////////////////////////////////////////////////
 
 public class J_Rectangle implements J_Shape
 {
-    public double m_minX, m_minY; // µÚÒ»¸ö½Çµã×ø±ê
-    public double m_maxX, m_maxY; // ÁíÒ»¸ö½Çµã×ø±ê
+    public double m_minX, m_minY; // ç¬¬ä¸€ä¸ªè§’ç‚¹åæ ‡
+    public double m_maxX, m_maxY; // å¦ä¸€ä¸ªè§’ç‚¹åæ ‡
 
     public J_Rectangle(double x1, double y1, double x2, double y2)
     {
@@ -67,7 +67,7 @@ public class J_Rectangle implements J_Shape
         {
             m_minX = x2;
             m_maxX = x1;
-        } // if-else½á¹¹½áÊø
+        } // if-elseç»“æž„ç»“æŸ
         if (y1<y2)
         {
             m_minY = y1;
@@ -77,13 +77,13 @@ public class J_Rectangle implements J_Shape
         {
             m_minY = y2;
             m_maxY = y1;
-        } // if-else½á¹¹½áÊø
-    } // J_Rectangle¹¹Ôì·½·¨½áÊø
+        } // if-elseç»“æž„ç»“æŸ
+    } // J_Rectangleæž„é€ æ–¹æ³•ç»“æŸ
 
-    // ¼ÆËã²¢·µ»ØÐÎ×´µÄÃæ»ý
+    // è®¡ç®—å¹¶è¿”å›žå½¢çŠ¶çš„é¢ç§¯
     public double mb_getArea( )
     {
         return ( (m_maxY-m_minY) * (m_maxX-m_minX) );
-    } // ·½·¨mb_getArea½áÊø
-} // ÀàJ_Rectangle½áÊø
+    } // æ–¹æ³•mb_getAreaç»“æŸ
+} // ç±»J_Rectangleç»“æŸ
 

@@ -1,47 +1,47 @@
-//¡¾Àı3.4¡¿  ÊµÀı³ÉÔ±ÓëÀà³ÉÔ±¡£
-//¡¾Àı3.5¡¿  ÀàµÄ¼Ì³ĞĞÔ¡£
-//¡¾Àı3.6¡¿  ÀàÖĞ·½·¨µÄ¶àÌ¬ĞÔ¡£
-//¡¾Àı3.7¡¿  ÔËĞĞÊ±¶àÌ¬ĞÔµÄÓ¦ÓÃ¡£
+//ã€ä¾‹3.4ã€‘  å®ä¾‹æˆå‘˜ä¸ç±»æˆå‘˜ã€‚
+//ã€ä¾‹3.5ã€‘  ç±»çš„ç»§æ‰¿æ€§ã€‚
+//ã€ä¾‹3.6ã€‘  ç±»ä¸­æ–¹æ³•çš„å¤šæ€æ€§ã€‚
+//ã€ä¾‹3.7ã€‘  è¿è¡Œæ—¶å¤šæ€æ€§çš„åº”ç”¨ã€‚
 
 public class Person1
 {
-    protected String name;               //ĞÕÃû£¬ÊµÀı³ÉÔ±±äÁ¿£¬±£»¤³ÉÔ±
-    protected int age;                   //ÄêÁä
-    protected static int count=0;        //ÈËÊı£¬Àà³ÉÔ±±äÁ¿£¬±¾Àà¼°×ÓÀà¶ÔÏó¼ÆÊı
+    protected String name;               //å§“åï¼Œå®ä¾‹æˆå‘˜å˜é‡ï¼Œä¿æŠ¤æˆå‘˜
+    protected int age;                   //å¹´é¾„
+    protected static int count=0;        //äººæ•°ï¼Œç±»æˆå‘˜å˜é‡ï¼Œæœ¬ç±»åŠå­ç±»å¯¹è±¡è®¡æ•°
 
-    public Person1(String name,int age)  //¹¹Ôì·½·¨
+    public Person1(String name,int age)  //æ„é€ æ–¹æ³•
     {
         this.set(name);
         this.set(age);
-        count++;                         //ÈËÊıÔö1
+        count++;                         //äººæ•°å¢1
     } 
 
-    public Person1(String name)          //¹¹Ôì·½·¨ÖØÔØ
+    public Person1(String name)          //æ„é€ æ–¹æ³•é‡è½½
     {
-        this(name,0);                    //µ÷ÓÃ±¾ÀàµÄ¹¹Ôì·½·¨
+        this(name,0);                    //è°ƒç”¨æœ¬ç±»çš„æ„é€ æ–¹æ³•
     } 
     
-    public Person1()                     //¹¹Ôì·½·¨ÖØÔØ
+    public Person1()                     //æ„é€ æ–¹æ³•é‡è½½
     {
-        this("ĞÕÃûÎ´Öª",0);
+        this("å§“åæœªçŸ¥",0);
     }
      
-    public Person1(Person1 p1)           //¹¹Ôì·½·¨ÖØÔØ
+    public Person1(Person1 p1)           //æ„é€ æ–¹æ³•é‡è½½
     {
         this(p1.name, p1.age);
     }
 
-    public void finalize()               //Îö¹¹·½·¨
+    public void finalize()               //ææ„æ–¹æ³•
     {
-        System.out.println("ÊÍ·Å¶ÔÏó ("+this.toString()+")");
-                                         //µ÷ÓÃÊµÀı³ÉÔ±·½·¨
-        this.count--;                    //ÈËÊı¼õ1
+        System.out.println("é‡Šæ”¾å¯¹è±¡ ("+this.toString()+")");
+                                         //è°ƒç”¨å®ä¾‹æˆå‘˜æ–¹æ³•
+        this.count--;                    //äººæ•°å‡1
     }
     
-    public void set(String name)         //ÉèÖÃ³ÉÔ±±äÁ¿Öµ
+    public void set(String name)         //è®¾ç½®æˆå‘˜å˜é‡å€¼
     {
         if (name==null || name=="")
-            this.name = "ĞÕÃûÎ´Öª";
+            this.name = "å§“åæœªçŸ¥";
         else
             this.name = name;
     }
@@ -66,7 +66,7 @@ public class Person1
         this.set(p1.age);
     }
             
-    public String getName()              //»ñµÃ³ÉÔ±±äÁ¿Öµ      
+    public String getName()              //è·å¾—æˆå‘˜å˜é‡å€¼      
     {
         return this.name;
     }
@@ -76,37 +76,37 @@ public class Person1
         return this.age;
     }
 
-    public static void howMany()         //Àà³ÉÔ±·½·¨£¬Ö»ÄÜ·ÃÎÊÀà³ÉÔ±±äÁ¿
+    public static void howMany()         //ç±»æˆå‘˜æ–¹æ³•ï¼Œåªèƒ½è®¿é—®ç±»æˆå‘˜å˜é‡
     {
         System.out.print("Person1.count="+count+"  ");
     }
     
     public String belongClassName() 
     {
-        String str="";                   //¾Ö²¿±äÁ¿£¬²»ÄÜÊ¹ÓÃĞŞÊÎ·û
-        if (this instanceof Person1)     //ÅĞ¶Ïµ±Ç°¶ÔÏóÊÇ·ñÊôÓÚPerson1Àà
+        String str="";                   //å±€éƒ¨å˜é‡ï¼Œä¸èƒ½ä½¿ç”¨ä¿®é¥°ç¬¦
+        if (this instanceof Person1)     //åˆ¤æ–­å½“å‰å¯¹è±¡æ˜¯å¦å±äºPerson1ç±»
             str="Person1";
         return str;
     }
 
     public String toString() 
     {
-        return this.name+","+this.age+"Ëê";
+        return this.name+","+this.age+"å²";
     }
     
-    public void print()                  //ÊµÀı³ÉÔ±·½·¨,¿ÉÒÔ·ÃÎÊÀà³ÉÔ±±äÁ¿ºÍÊµÀı³ÉÔ±±äÁ¿
+    public void print()                  //å®ä¾‹æˆå‘˜æ–¹æ³•,å¯ä»¥è®¿é—®ç±»æˆå‘˜å˜é‡å’Œå®ä¾‹æˆå‘˜å˜é‡
     {
-        this.howMany();                  //Í¨¹ı¶ÔÏóµ÷ÓÃÀà³ÉÔ±·½·¨
-        System.out.println(this.belongClassName()+"Àà  ("+this.toString()+")");
-                                         //Í¨¹ı¶ÔÏóµ÷ÓÃÊµÀı³ÉÔ±·½·¨
+        this.howMany();                  //é€šè¿‡å¯¹è±¡è°ƒç”¨ç±»æˆå‘˜æ–¹æ³•
+        System.out.println(this.belongClassName()+"ç±»  ("+this.toString()+")");
+                                         //é€šè¿‡å¯¹è±¡è°ƒç”¨å®ä¾‹æˆå‘˜æ–¹æ³•
     }
 
-    public int olderThen(Person1 p2)     //±È½ÏÁ½¸öÈËµÄÄêÁä
+    public int olderThen(Person1 p2)     //æ¯”è¾ƒä¸¤ä¸ªäººçš„å¹´é¾„
     {
         return this.age - p2.age;
     }
     
-    public boolean equals(Object obj)    //¸²¸ÇObjectÀàÖĞ·½·¨
+    public boolean equals(Object obj)    //è¦†ç›–Objectç±»ä¸­æ–¹æ³•
     {
         if (this == obj) 
         {
@@ -120,62 +120,62 @@ public class Person1
         return false;
     }
 
-    public static void main(String args[])   //main·½·¨Ò²ÊÇÀà³ÉÔ±·½·¨
+    public static void main(String args[])   //mainæ–¹æ³•ä¹Ÿæ˜¯ç±»æˆå‘˜æ–¹æ³•
     {
-        Person1 p1 = new Person1("ÀîĞ¡Ã÷",21);
+        Person1 p1 = new Person1("æå°æ˜",21);
         p1.print();
-        Person1 p2 = new Person1("Íõ´óÎ°",19);
+        Person1 p2 = new Person1("ç‹å¤§ä¼Ÿ",19);
         p2.print();
-        System.out.println(p1.getName()+" ±È "+p2.getName()+" ´ó "+p1.olderThen(p2)+" Ëê");
-                                         //Í¨¹ı¶ÔÏóµ÷ÓÃÊµÀı³ÉÔ±·½·¨
-        p1.finalize();                   //µ÷ÓÃ¶ÔÏóµÄÎö¹¹·½·¨
-        p1 = null;                       //p1Îª¿Õ¶ÔÏó
-        Person1.howMany();               //Í¨¹ıÀàÃûµ÷ÓÃÀà³ÉÔ±·½·¨
+        System.out.println(p1.getName()+" æ¯” "+p2.getName()+" å¤§ "+p1.olderThen(p2)+" å²");
+                                         //é€šè¿‡å¯¹è±¡è°ƒç”¨å®ä¾‹æˆå‘˜æ–¹æ³•
+        p1.finalize();                   //è°ƒç”¨å¯¹è±¡çš„ææ„æ–¹æ³•
+        p1 = null;                       //p1ä¸ºç©ºå¯¹è±¡
+        Person1.howMany();               //é€šè¿‡ç±»åè°ƒç”¨ç±»æˆå‘˜æ–¹æ³•
         System.out.println();
     }
 }
 
 /* 
-³ÌĞòÔËĞĞ½á¹ûÈçÏÂ£º
+ç¨‹åºè¿è¡Œç»“æœå¦‚ä¸‹ï¼š
 
-Person1.count=1  Person1Àà  (ÀîĞ¡Ã÷,21Ëê) 
-Person1.count=2  Person1Àà  (Íõ´óÎ°,19Ëê)
-ÀîĞ¡Ã÷ ±È Íõ´óÎ° ´ó 2 Ëê
-ÊÍ·Å¶ÔÏó (ÀîĞ¡Ã÷,21Ëê) 
+Person1.count=1  Person1ç±»  (æå°æ˜,21å²) 
+Person1.count=2  Person1ç±»  (ç‹å¤§ä¼Ÿ,19å²)
+æå°æ˜ æ¯” ç‹å¤§ä¼Ÿ å¤§ 2 å²
+é‡Šæ”¾å¯¹è±¡ (æå°æ˜,21å²) 
 Person1.count=1
 
 */
 /*
-    protected Date2 birthday;               //³öÉúÈÕÆÚ
-    public int age()         //ÄêÁä
+    protected Date2 birthday;               //å‡ºç”Ÿæ—¥æœŸ
+    public int age()         //å¹´é¾„
     {
         return this.age - b.age;
     }
 
 
-³ÌĞòÕıÈ·:
+ç¨‹åºæ­£ç¡®:
 
-1¡¢µ±Ã»ÓĞ´´½¨ÈÎºÎ¶ÔÏóÊ±£¬Êä³öÈçÏÂ£º
+1ã€å½“æ²¡æœ‰åˆ›å»ºä»»ä½•å¯¹è±¡æ—¶ï¼Œè¾“å‡ºå¦‚ä¸‹ï¼š
 Person1.count=0
 
 
     public void print()
     {
-        System.out.println("±¾ÀàÃû="+this.getClass().getName()+"  "+
-             "³¬ÀàÃû="+this.getClass().getSuperclass().getName()+"  ");
+        System.out.println("æœ¬ç±»å="+this.getClass().getName()+"  "+
+             "è¶…ç±»å="+this.getClass().getSuperclass().getName()+"  ");
     } 
-        System.out.println(this.getClass().getName()+"Àà  "+this.toString());  //¿ÉÒÔµ÷ÓÃÊµÀı·½·¨
+        System.out.println(this.getClass().getName()+"ç±»  "+this.toString());  //å¯ä»¥è°ƒç”¨å®ä¾‹æ–¹æ³•
 
-³ÌĞò´íÎó:
+ç¨‹åºé”™è¯¯:
 
     public static int howMany()
     {
-        Person1 objp=this;             //±àÒë´í,Àà·½·¨ÖĞ²»ÄÜÊ¹ÓÃthisÒıÓÃ, non-static variable this cannot be referenced from a static context    
+        Person1 objp=this;             //ç¼–è¯‘é”™,ç±»æ–¹æ³•ä¸­ä¸èƒ½ä½¿ç”¨thiså¼•ç”¨, non-static variable this cannot be referenced from a static context    
         return count;
     }
 
-        public String str="";                   //±àÒë´í,¾Ö²¿±äÁ¿£¬²»ÄÜÊ¹ÓÃĞŞÊÎ·û
+        public String str="";                   //ç¼–è¯‘é”™,å±€éƒ¨å˜é‡ï¼Œä¸èƒ½ä½¿ç”¨ä¿®é¥°ç¬¦
 
-        static String str="";                   //¾Ö²¿±äÁ¿£¬²»ÄÜÊ¹ÓÃĞŞÊÎ·û
+        static String str="";                   //å±€éƒ¨å˜é‡ï¼Œä¸èƒ½ä½¿ç”¨ä¿®é¥°ç¬¦
     
 */

@@ -2,10 +2,10 @@
 // 
 // J_Teacher.java
 // 
-// ¿ª·¢Õß: Óº¿¡º£
+// å¼€å‘è€…: é›ä¿Šæµ·
 // ////////////////////////////////////////////////////////
-// ¼ò½é:
-//     Ö°¹¤Óë½ÌÊ¦Ö®¼äµÄ¼Ì³ÐÐÔÀý³Ì¡£
+// ç®€ä»‹:
+//     èŒå·¥ä¸Žæ•™å¸ˆä¹‹é—´çš„ç»§æ‰¿æ€§ä¾‹ç¨‹ã€‚
 // ////////////////////////////////////////////////////////
 // Copyright:
 //
@@ -31,55 +31,55 @@
 //      [4] Jun-Hai Yong. Programming in Java. 
 //          Beijing: Tsinghua University Press, 2004.
 //
-// °æÈ¨:
-// Ê¹ÓÃ±¾Àý×Ó£¬Çë×¢Ã÷ÒýÓÃ:
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-// ÇëºÏ·¨Ê¹ÓÃÀý³Ì£¬ÆäÓÃÍ¾Ó¦µ±ºÏ·¨ÓÐÒæ¶øÇÒ²»Ó¦¶ÔÈÎºÎÈËÔì³ÉÈÎºÎ
-// ÉËº¦»òËðÊ§¡£Í¬Ê±Çë×¢Òâ½Ì²Ä×÷Õß¼°³ö°æÉçÃ»ÓÐ¶ÔÀý³Ì×ö³öÈÎºÎ³Ð
-// ÅµÓë±£Ö¤¡£
-// ¾ßÌåÒýÓÃµÄ·½·¨¼°Àý×ÓÈçÏÂ:
-// ±¾³ÌÐòÊÇÏÂÃæ½Ì²ÄµÄÒ»¸öÀý³Ì(»ò±¾³ÌÐò»ùÓÚÏÂÃæ½Ì²ÄµÄÀý³ÌÐÞ¸Ä)
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
+// ç‰ˆæƒ:
+// ä½¿ç”¨æœ¬ä¾‹å­ï¼Œè¯·æ³¨æ˜Žå¼•ç”¨:
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+// è¯·åˆæ³•ä½¿ç”¨ä¾‹ç¨‹ï¼Œå…¶ç”¨é€”åº”å½“åˆæ³•æœ‰ç›Šè€Œä¸”ä¸åº”å¯¹ä»»ä½•äººé€ æˆä»»ä½•
+// ä¼¤å®³æˆ–æŸå¤±ã€‚åŒæ—¶è¯·æ³¨æ„æ•™æä½œè€…åŠå‡ºç‰ˆç¤¾æ²¡æœ‰å¯¹ä¾‹ç¨‹åšå‡ºä»»ä½•æ‰¿
+// è¯ºä¸Žä¿è¯ã€‚
+// å…·ä½“å¼•ç”¨çš„æ–¹æ³•åŠä¾‹å­å¦‚ä¸‹:
+// æœ¬ç¨‹åºæ˜¯ä¸‹é¢æ•™æçš„ä¸€ä¸ªä¾‹ç¨‹(æˆ–æœ¬ç¨‹åºåŸºäºŽä¸‹é¢æ•™æçš„ä¾‹ç¨‹ä¿®æ”¹)
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
 //
-// Óº¿¡º£±àÐ´µÄÒ»Ð©½Ì²ÄºÍ½Ì²ÎÈçÏÂ:
-//      [1] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-//      [2] Óº¿¡º£. Java³ÌÐòÉè¼Æ½Ì³Ì£¨µÚ2°æ£©. 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2007.
-//      [3] Óº¿¡º£. Java³ÌÐòÉè¼ÆÏ°Ìâ¼¯(º¬²Î¿¼´ð°¸). 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2006.
-//      [4] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2004.
+// é›ä¿Šæµ·ç¼–å†™çš„ä¸€äº›æ•™æå’Œæ•™å‚å¦‚ä¸‹:
+//      [1] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+//      [2] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡æ•™ç¨‹ï¼ˆç¬¬2ç‰ˆï¼‰. 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2007.
+//      [3] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡ä¹ é¢˜é›†(å«å‚è€ƒç­”æ¡ˆ). 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2006.
+//      [4] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2004.
 //
 // ////////////////////////////////////////////////////////
 
 class J_Employee
 {
-    public int m_workYear; // ¹¤×÷µÄÄêÏÞ
+    public int m_workYear; // å·¥ä½œçš„å¹´é™
 
     public J_Employee( )
     {
         m_workYear = 1;
-    } // J_Employee¹¹Ôì·½·¨½áÊø
-} // ÀàJ_Employee½áÊø
+    } // J_Employeeæž„é€ æ–¹æ³•ç»“æŸ
+} // ç±»J_Employeeç»“æŸ
 
 public class J_Teacher extends J_Employee
 {
-    public int m_classHour; // ÊÚ¿ÎµÄ¿ÎÊ±
+    public int m_classHour; // æŽˆè¯¾çš„è¯¾æ—¶
 
     public J_Teacher( )
     {
         m_classHour = 96;
-    } // J_Teacher¹¹Ôì·½·¨½áÊø
+    } // J_Teacheræž„é€ æ–¹æ³•ç»“æŸ
 
     public void mb_printInfo( )
     {
-        System.out.println("¸Ã½ÌÊ¦µÄ¹¤×÷ÄêÏÞÎª" + m_workYear);
-        System.out.println("¸Ã½ÌÊ¦ÊÚ¿ÎµÄ¿ÎÊ±Îª" + m_classHour);
-    } // ·½·¨mb_printInfo½áÊø
+        System.out.println("è¯¥æ•™å¸ˆçš„å·¥ä½œå¹´é™ä¸º" + m_workYear);
+        System.out.println("è¯¥æ•™å¸ˆæŽˆè¯¾çš„è¯¾æ—¶ä¸º" + m_classHour);
+    } // æ–¹æ³•mb_printInfoç»“æŸ
 
     public static void main(String args[ ])
     {
         J_Teacher tom = new J_Teacher( );
         tom.mb_printInfo( );
-    } // ·½·¨main½áÊø
-} // ÀàJ_Teacher½áÊø
+    } // æ–¹æ³•mainç»“æŸ
+} // ç±»J_Teacherç»“æŸ
 

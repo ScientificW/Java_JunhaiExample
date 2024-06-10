@@ -1,36 +1,36 @@
-//¡¾Àı3.5¡¿  ÀàµÄ¼Ì³ĞĞÔ¡£
+//ã€ä¾‹3.5ã€‘  ç±»çš„ç»§æ‰¿æ€§ã€‚
 
-public class Student1 extends Person1    //Student1ÊÇPerson1ÀàµÄ×ÓÀà
+public class Student1 extends Person1    //Student1æ˜¯Person1ç±»çš„å­ç±»
 {
-    private String speciality;           //×¨Òµ£¬×ÓÀàË½ÓĞ³ÉÔ±±äÁ¿
+    private String speciality;           //ä¸“ä¸šï¼Œå­ç±»ç§æœ‰æˆå‘˜å˜é‡
 
-    public Student1(String name, int age, String spec) //×ÓÀà¹¹Ôì·½·¨
+    public Student1(String name, int age, String spec) //å­ç±»æ„é€ æ–¹æ³•
     {
-        super(name,age);                 //µ÷ÓÃ¸¸ÀàµÄ¹¹Ôì·½·¨
+        super(name,age);                 //è°ƒç”¨çˆ¶ç±»çš„æ„é€ æ–¹æ³•
         this.speciality = spec;
     } 
 
     public static void main(String args[])
     {
-        Person1 p1 = new Person1("ÀîĞ¡Ã÷",21);
+        Person1 p1 = new Person1("æå°æ˜",21);
         p1.print();
-        Student1 s1 = new Student1("Íõ´óÎ°",19,"¼ÆËã»ú");
+        Student1 s1 = new Student1("ç‹å¤§ä¼Ÿ",19,"è®¡ç®—æœº");
         s1.print();
-        System.out.println(p1.getName()+" ±È "+s1.getName()+" ´ó "+p1.olderThen(s1)+" Ëê");
-                                         //Í¨¹ı¶ÔÏóµ÷ÓÃ¸¸ÀàµÄÊµÀı³ÉÔ±·½·¨
-        s1.finalize();                   //¼Ì³Ğ¸¸ÀàµÄÎö¹¹·½·¨
+        System.out.println(p1.getName()+" æ¯” "+s1.getName()+" å¤§ "+p1.olderThen(s1)+" å²");
+                                         //é€šè¿‡å¯¹è±¡è°ƒç”¨çˆ¶ç±»çš„å®ä¾‹æˆå‘˜æ–¹æ³•
+        s1.finalize();                   //ç»§æ‰¿çˆ¶ç±»çš„ææ„æ–¹æ³•
         s1 = null;
-        Person1.howMany();               //µ÷ÓÃ¸¸ÀàµÄÀà³ÉÔ±·½·¨
+        Person1.howMany();               //è°ƒç”¨çˆ¶ç±»çš„ç±»æˆå‘˜æ–¹æ³•
         System.out.println();
     }
 }
 /*
-³ÌĞòÔËĞĞ½á¹ûÈçÏÂ£º
+ç¨‹åºè¿è¡Œç»“æœå¦‚ä¸‹ï¼š
 
-Person1.count=1  Person1Àà  (ÀîĞ¡Ã÷,21Ëê) 
-Person1.count=2  Person1Àà  (Íõ´óÎ°,19Ëê)
-ÀîĞ¡Ã÷ ±È Íõ´óÎ° ´ó 2 Ëê
-ÊÍ·Å¶ÔÏó (Íõ´óÎ°,19Ëê) 
+Person1.count=1  Person1ç±»  (æå°æ˜,21å²) 
+Person1.count=2  Person1ç±»  (ç‹å¤§ä¼Ÿ,19å²)
+æå°æ˜ æ¯” ç‹å¤§ä¼Ÿ å¤§ 2 å²
+é‡Šæ”¾å¯¹è±¡ (ç‹å¤§ä¼Ÿ,19å²) 
 Person1.count=1
 
 */

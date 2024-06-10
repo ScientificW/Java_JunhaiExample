@@ -2,10 +2,10 @@
 // 
 // J_Finalize.java
 // 
-// ¿ª·¢Õß: Óº¿¡º£
+// å¼€å‘è€…: é›ä¿Šæµ·
 // ////////////////////////////////////////////////////////
-// ¼ò½é:
-//     ÊµÀý¶ÔÏóÉúÃüÖÜÆÚµÄÀý³Ì¡£
+// ç®€ä»‹:
+//     å®žä¾‹å¯¹è±¡ç”Ÿå‘½å‘¨æœŸçš„ä¾‹ç¨‹ã€‚
 // ////////////////////////////////////////////////////////
 // Copyright:
 //
@@ -31,55 +31,55 @@
 //      [4] Jun-Hai Yong. Programming in Java. 
 //          Beijing: Tsinghua University Press, 2004.
 //
-// °æÈ¨:
-// Ê¹ÓÃ±¾Àý×Ó£¬Çë×¢Ã÷ÒýÓÃ:
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-// ÇëºÏ·¨Ê¹ÓÃÀý³Ì£¬ÆäÓÃÍ¾Ó¦µ±ºÏ·¨ÓÐÒæ¶øÇÒ²»Ó¦¶ÔÈÎºÎÈËÔì³ÉÈÎºÎ
-// ÉËº¦»òËðÊ§¡£Í¬Ê±Çë×¢Òâ½Ì²Ä×÷Õß¼°³ö°æÉçÃ»ÓÐ¶ÔÀý³Ì×ö³öÈÎºÎ³Ð
-// ÅµÓë±£Ö¤¡£
-// ¾ßÌåÒýÓÃµÄ·½·¨¼°Àý×ÓÈçÏÂ:
-// ±¾³ÌÐòÊÇÏÂÃæ½Ì²ÄµÄÒ»¸öÀý³Ì(»ò±¾³ÌÐò»ùÓÚÏÂÃæ½Ì²ÄµÄÀý³ÌÐÞ¸Ä)
-//     Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
+// ç‰ˆæƒ:
+// ä½¿ç”¨æœ¬ä¾‹å­ï¼Œè¯·æ³¨æ˜Žå¼•ç”¨:
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+// è¯·åˆæ³•ä½¿ç”¨ä¾‹ç¨‹ï¼Œå…¶ç”¨é€”åº”å½“åˆæ³•æœ‰ç›Šè€Œä¸”ä¸åº”å¯¹ä»»ä½•äººé€ æˆä»»ä½•
+// ä¼¤å®³æˆ–æŸå¤±ã€‚åŒæ—¶è¯·æ³¨æ„æ•™æä½œè€…åŠå‡ºç‰ˆç¤¾æ²¡æœ‰å¯¹ä¾‹ç¨‹åšå‡ºä»»ä½•æ‰¿
+// è¯ºä¸Žä¿è¯ã€‚
+// å…·ä½“å¼•ç”¨çš„æ–¹æ³•åŠä¾‹å­å¦‚ä¸‹:
+// æœ¬ç¨‹åºæ˜¯ä¸‹é¢æ•™æçš„ä¸€ä¸ªä¾‹ç¨‹(æˆ–æœ¬ç¨‹åºåŸºäºŽä¸‹é¢æ•™æçš„ä¾‹ç¨‹ä¿®æ”¹)
+//     é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
 //
-// Óº¿¡º£±àÐ´µÄÒ»Ð©½Ì²ÄºÍ½Ì²ÎÈçÏÂ:
-//      [1] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2008.
-//      [2] Óº¿¡º£. Java³ÌÐòÉè¼Æ½Ì³Ì£¨µÚ2°æ£©. 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2007.
-//      [3] Óº¿¡º£. Java³ÌÐòÉè¼ÆÏ°Ìâ¼¯(º¬²Î¿¼´ð°¸). 
-//          ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2006.
-//      [4] Óº¿¡º£. Java³ÌÐòÉè¼Æ. ±±¾©: Çå»ª´óÑ§³ö°æÉç, 2004.
+// é›ä¿Šæµ·ç¼–å†™çš„ä¸€äº›æ•™æå’Œæ•™å‚å¦‚ä¸‹:
+//      [1] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2008.
+//      [2] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡æ•™ç¨‹ï¼ˆç¬¬2ç‰ˆï¼‰. 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2007.
+//      [3] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡ä¹ é¢˜é›†(å«å‚è€ƒç­”æ¡ˆ). 
+//          åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2006.
+//      [4] é›ä¿Šæµ·. Javaç¨‹åºè®¾è®¡. åŒ—äº¬: æ¸…åŽå¤§å­¦å‡ºç‰ˆç¤¾, 2004.
 //
 // ////////////////////////////////////////////////////////
 
 class J_Book1
 {
-    public int m_id; // ÊéµÄ±àºÅ
+    public int m_id; // ä¹¦çš„ç¼–å·
 
     public J_Book1(int i)
     {
         m_id = i;
-    } // J_Book¹¹Ôì·½·¨½áÊø
+    } // J_Bookæž„é€ æ–¹æ³•ç»“æŸ
 
     protected void finalize( )
     {
         switch (m_id)
         {
         case 1:
-            System.out.print("¡¶Æ®¡·");
+            System.out.print("ã€Šé£˜ã€‹");
             break;
         case 2:
-            System.out.print("¡¶Java³ÌÐòÉè¼Æ½Ì³Ì¡·");
+            System.out.print("ã€ŠJavaç¨‹åºè®¾è®¡æ•™ç¨‹ã€‹");
             break;
         case 3:
-            System.out.print("¡¶ÂÞÂí¼ÙÈÕ¡·");
+            System.out.print("ã€Šç½—é©¬å‡æ—¥ã€‹");
             break;
         default:
-            System.out.print("Î´ÖªÊé¼®");
+            System.out.print("æœªçŸ¥ä¹¦ç±");
             break;
-        } // switchÓï¾ä½áÊø
-        System.out.println("Ëù¶ÔÓ¦µÄÊµÀý¶ÔÏó´æ´¢µ¥Ôª±»»ØÊÕ");
-    } // ·½·¨finalize½áÊø
-} // ÀàJ_Book½áÊø
+        } // switchè¯­å¥ç»“æŸ
+        System.out.println("æ‰€å¯¹åº”çš„å®žä¾‹å¯¹è±¡å­˜å‚¨å•å…ƒè¢«å›žæ”¶");
+    } // æ–¹æ³•finalizeç»“æŸ
+} // ç±»J_Bookç»“æŸ
 
 public class J_Finalize
 {
@@ -89,7 +89,7 @@ public class J_Finalize
         //book1 = null;
         new J_Book1(2);
         new J_Book1(3);
-        System.gc( ); // ÉêÇëÁ¢¼´»ØÊÕÀ¬»ø
-    } // ·½·¨main½áÊø
-} // ÀàJ_Finalize½áÊø
+        System.gc( ); // ç”³è¯·ç«‹å³å›žæ”¶åžƒåœ¾
+    } // æ–¹æ³•mainç»“æŸ
+} // ç±»J_Finalizeç»“æŸ
 

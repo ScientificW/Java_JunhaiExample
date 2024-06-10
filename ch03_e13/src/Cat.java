@@ -1,8 +1,8 @@
 public class Cat extends Animal {
    public void cry() {
-      System.out.println("ίχίχ...ίχίχ"); 
+      System.out.println("ε–µε–µ...ε–µε–µ"); 
    }  
    public String getAnimalName() {
-      return "Γ¨";
+      return "η«";
    }
 }
